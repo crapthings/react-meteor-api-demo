@@ -53,3 +53,9 @@ Meteor.isServer && Meteor.publish('postsByAuthorId', function (authorId) {
     }
   })
 })
+
+
+Meteor.isServer && Meteor.publish('test', (...a) => {
+  console.log(a)
+  return Posts.find()
+})

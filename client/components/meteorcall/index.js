@@ -10,7 +10,7 @@ const Showcase = () => <div>
 FlowRouter.route('/meteor-call', {
   action () {
     Mount(Components.App, {
-      content: () => <Showcase />
+      component: () => <Showcase />
     })
   }
 })

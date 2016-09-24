@@ -1,7 +1,7 @@
 FlowRouter.route('/test002', {
   action () {
     Mount(Components.App, {
-      content: () => <Components.Test002 />
+      component: () => <Components.Test002 />
     })
   }
 })
