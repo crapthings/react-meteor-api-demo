@@ -1,8 +1,11 @@
 import * as collections from '/collections'
 
+collections.Todos = Todos
+
 const dummy = {
   makeAuthors,
-  makePosts
+  makePosts,
+  makeTodos,
 }
 
 const idsHolder = {}
@@ -30,6 +33,14 @@ function makePosts () {
   return {
     title: faker.lorem.sentence(),
     createdAt: new Date(),
-    authorId: _.sample(idsHolder.authors)
+    authorId: _.sample(idsHolder.authors),
+  }
+}
+
+function makeTodos () {
+  return {
+    content: faker.lorem.sentence(),
+    createdAt: new Date(),
+    completed: false,
   }
 }
